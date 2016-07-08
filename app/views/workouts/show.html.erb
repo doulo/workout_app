@@ -5,4 +5,7 @@
 <h4><%= @workout.length %></h4>
 <h4><%= @workout.mood %></h4>
 
-<h5><%= link_to 'Home', root_path %></h5>
+<h5><%= link_to 'Home', root_path %> |
+  <%= link_to 'Edit', edit_workout_path %> |
+  <%= link_to 'Delete', workout_path(@workout), method: :delete, data: { confirm: "Are you sure?"} %>
+</h5>
